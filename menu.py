@@ -1,17 +1,19 @@
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import *
 import sys
+from foods import *
 
 class Menu:
     def __init__(self):
         aplicacion = QtWidgets.QApplication([])
         menu = uic.loadUi("gui/menu.ui")
         menu.show()
+        food = Food()
 
         # Table Configuration
         menu.table_foods.setHorizontalHeaderLabels(['ID', 'Nombre Alimento', 'Gramos Proteína', 'Gramos Carbohidrato', 'Gramos Grasa'])
         menu.table_foods.setEditTriggers(QTableWidget.NoEditTriggers)
-        menu.table_foods.setSelectionBehavior(QTableWidget.SelectRows)#comportamiento de selección al hacer clic en un registro de la tabla
+        menu.table_foods.setSelectionBehavior(QTableWidget.SelectRows)# select the entire row and not the field
         menu.table_foods.cellClicked.connect(self.select)
 
         menu.btn_add_food.clicked.connect(self.add)
@@ -34,7 +36,12 @@ class Menu:
         print("Hola, soy la acción de cancelar")
 
     def validate_fields(self):
-        pass
+        if self.menu.txtNombre.text() == "" or self.menu.txtCorreo.text() == "":
+            alerta = QMessageBox()
+            alerta.setText('¡Debes llenar todos los campos!')
+            alerta.setIcon(QMessageBox.Information)#ícono de mensaje
+            alerta.exec()
+            return True
 
     def consult(self):
         pass
