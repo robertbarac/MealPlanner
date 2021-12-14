@@ -21,6 +21,8 @@ class Menu:
         self.menu.btn_modify_food.clicked.connect(self.modify)
         self.menu.btn_delete_food.clicked.connect(self.delete)
         self.menu.btn_cancel.clicked.connect(self.cancel)
+        self.menu.btn_search_food.clicked.connect(self.search_food)
+        self.menu.btn_clean_search.clicked.connect(self.clean_search_field)
         
         sys.exit(aplicacion.exec())
     
@@ -37,6 +39,8 @@ class Menu:
 
 
     def modify(self):
+        if self.validate_fields():
+            return False
         food_name = self.menu.line_food_name.text()
         id = self.menu.line_id.text()
         protein_grams = self.menu.dsb_protein_grams.text().replace(',', '.')
@@ -63,7 +67,7 @@ class Menu:
             return True
 
     def consult(self):
-        self.menu.table_foods.setRowCount(0) # limpiar la tabla 
+        self.menu.table_foods.setRowCount(0) # Cleaning the table
         index_control = 0
         foods = self.food.read_foods()
         for food in foods:
@@ -74,10 +78,7 @@ class Menu:
             self.menu.table_foods.setItem(index_control, 3, QTableWidgetItem(str(food[3])))
             self.menu.table_foods.setItem(index_control, 4, QTableWidgetItem(str(food[4])))
             index_control += 1
-        self.menu.btn_add_food.setEnabled(True)
-        self.menu.btn_modify_food.setEnabled(False)
-        self.menu.btn_delete_food.setEnabled(False)
-        self.menu.btn_cancel.setEnabled(False)
+        self.enable_add()
 
     def select(self):
         id = self.menu.table_foods.selectedIndexes()[0].data()
@@ -90,11 +91,48 @@ class Menu:
         self.menu.dsb_protein_grams.setValue(float(protein_grams))
         self.menu.dsb_carbos_grams.setValue(float(carbos_grams))
         self.menu.dsb_fat_grams.setValue(float(fat_grams))
+        self.unable_add()
+
+    def clean_search_field(self):
+        self.menu.line_search_food.setText("")
+        self.consult()
+        
+
+    def unable_add(self):
         self.menu.btn_add_food.setEnabled(False)
         self.menu.btn_modify_food.setEnabled(True)
         self.menu.btn_delete_food.setEnabled(True)
         self.menu.btn_cancel.setEnabled(True)
+    
+    def enable_add(self):
+        self.menu.btn_modify_food.setEnabled(True)
+        self.menu.btn_modify_food.setEnabled(False)
+        self.menu.btn_delete_food.setEnabled(False)
+        self.menu.btn_cancel.setEnabled(False)
+    
+    def unable_all_crud_buttons(self):
+        self.menu.btn_add_food.setEnabled(False)
+        self.menu.btn_modify_food.setEnabled(False)
+        self.menu.btn_delete_food.setEnabled(False)
+        self.menu.btn_cancel.setEnabled(False)
 
-    def clean_fields(self):
-        pass
-
+    def search_food(self):
+        if self.menu.line_search_food.text() != "":
+            food_name = self.menu.line_search_food.text()
+            search = self.food.search_food(food_name)
+            self.menu.table_foods.setRowCount(0)
+            index_control = 0
+            for food in search:
+                self.menu.table_foods.setRowCount(index_control + 1)
+                self.menu.table_foods.setItem(index_control, 0, QTableWidgetItem(str(food[0])))
+                self.menu.table_foods.setItem(index_control, 1, QTableWidgetItem(str(food[1])))
+                self.menu.table_foods.setItem(index_control, 2, QTableWidgetItem(str(food[2])))
+                self.menu.table_foods.setItem(index_control, 3, QTableWidgetItem(str(food[3])))
+                self.menu.table_foods.setItem(index_control, 4, QTableWidgetItem(str(food[4])))
+                index_control += 1
+            self.unable_all_crud_buttons()
+        else:
+            alerta = QMessageBox()
+            alerta.setText('Entrada vacía. \nEscribe un alimento en la entrada para poder buscar')
+            alerta.setIcon(QMessageBox.Information)#ícono de mensaje
+            alerta.exec()

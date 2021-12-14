@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1069</width>
-    <height>660</height>
+    <width>1171</width>
+    <height>691</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,6 +32,11 @@ QFrame{
 	background-color: rgb(170, 170, 255);
 }
 
+QLabel#label_title{
+	font: 87 20pt &quot;Roboto Black&quot;;
+	color: rgb(0, 0, 127);
+}
+
 QLabel{
 color: white;
 	font: 10pt &quot;Roboto&quot;;
@@ -43,7 +48,7 @@ color: white;
      <rect>
       <x>30</x>
       <y>200</y>
-      <width>631</width>
+      <width>520</width>
       <height>381</height>
      </rect>
     </property>
@@ -167,10 +172,10 @@ color: white;
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>-1</x>
-      <y>-1</y>
-      <width>1071</width>
-      <height>661</height>
+      <x>0</x>
+      <y>0</y>
+      <width>1181</width>
+      <height>691</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -254,50 +259,669 @@ color: white;
     <widget class="Line" name="line">
      <property name="geometry">
       <rect>
-       <x>683</x>
-       <y>100</y>
+       <x>670</x>
+       <y>90</y>
        <width>20</width>
-       <height>561</height>
+       <height>601</height>
       </rect>
      </property>
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="btn_search_food">
      <property name="geometry">
       <rect>
-       <x>480</x>
+       <x>90</x>
        <y>610</y>
        <width>151</width>
        <height>23</height>
       </rect>
      </property>
      <property name="text">
-      <string>Cancelar Búsqueda</string>
+      <string>Buscar Alimento</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="line_search_food">
      <property name="geometry">
       <rect>
-       <x>250</x>
+       <x>260</x>
        <y>612</y>
        <width>171</width>
        <height>20</height>
       </rect>
      </property>
     </widget>
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="label_title">
      <property name="geometry">
       <rect>
-       <x>153</x>
-       <y>612</y>
+       <x>600</x>
+       <y>10</y>
+       <width>161</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>MealPlanner</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_age">
+     <property name="geometry">
+      <rect>
+       <x>734</x>
+       <y>70</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Edad:</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="sb_age">
+     <property name="geometry">
+      <rect>
+       <x>774</x>
+       <y>65</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_height">
+     <property name="geometry">
+      <rect>
+       <x>857</x>
+       <y>65</y>
        <width>71</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string>Altura(cm):</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="sb_height">
+     <property name="geometry">
+      <rect>
+       <x>936</x>
+       <y>65</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_waist">
+     <property name="geometry">
+      <rect>
+       <x>1005</x>
+       <y>65</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cintura(cm):</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="sb_waist">
+     <property name="geometry">
+      <rect>
+       <x>1087</x>
+       <y>65</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>220</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_activity_level">
+     <property name="geometry">
+      <rect>
+       <x>826</x>
+       <y>158</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nivel de Actividad:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_weight">
+     <property name="geometry">
+      <rect>
+       <x>850</x>
+       <y>111</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Peso(kg):</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="dsb_weight">
+     <property name="geometry">
+      <rect>
+       <x>917</x>
+       <y>110</y>
+       <width>62</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>1</number>
+     </property>
+     <property name="minimum">
+      <double>30.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>300.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="sb_neck">
+     <property name="geometry">
+      <rect>
+       <x>775</x>
+       <y>110</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>150</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_neck">
+     <property name="geometry">
+      <rect>
+       <x>700</x>
+       <y>110</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cuello(cm):</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_goal">
+     <property name="geometry">
+      <rect>
+       <x>1017</x>
+       <y>113</y>
+       <width>47</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Etapa:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cb_goal">
+     <property name="geometry">
+      <rect>
+       <x>1060</x>
+       <y>110</y>
+       <width>69</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Volumen</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Mantenimiento</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Definicion</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QDoubleSpinBox" name="dsb_activity_level">
+     <property name="geometry">
+      <rect>
+       <x>937</x>
+       <y>157</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>1</number>
+     </property>
+     <property name="minimum">
+      <double>1.200000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>2.200000000000000</double>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_calculate_macros">
+     <property name="geometry">
+      <rect>
+       <x>870</x>
+       <y>200</y>
+       <width>131</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Calcular Macros</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_macros_results">
+     <property name="geometry">
+      <rect>
+       <x>680</x>
+       <y>240</y>
+       <width>491</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(0, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_plate1">
+     <property name="geometry">
+      <rect>
+       <x>900</x>
+       <y>295</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Plato 1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_f1_p1">
+     <property name="geometry">
+      <rect>
+       <x>710</x>
+       <y>322</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Alimento 1:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_f2_p1">
+     <property name="geometry">
+      <rect>
+       <x>866</x>
+       <y>321</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Alimento 2:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_f3_p1">
+     <property name="geometry">
+      <rect>
+       <x>1025</x>
+       <y>322</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Alimento 3:</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="sb_a1_p1">
+     <property name="geometry">
+      <rect>
+       <x>783</x>
+       <y>319</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="sb_a2_p1">
+     <property name="geometry">
+      <rect>
+       <x>940</x>
+       <y>320</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="sb_a3_p1">
+     <property name="geometry">
+      <rect>
+       <x>1100</x>
+       <y>321</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_a3_p2">
+     <property name="geometry">
+      <rect>
+       <x>1025</x>
+       <y>386</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Alimento 3:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_a1_p2">
+     <property name="geometry">
+      <rect>
+       <x>710</x>
+       <y>386</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Alimento 1:</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="sb_a1_p2">
+     <property name="geometry">
+      <rect>
+       <x>783</x>
+       <y>383</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="sb_a2_p2">
+     <property name="geometry">
+      <rect>
+       <x>940</x>
+       <y>384</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_plate2">
+     <property name="geometry">
+      <rect>
+       <x>900</x>
+       <y>360</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Plato 2</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_a2_p2">
+     <property name="geometry">
+      <rect>
+       <x>866</x>
+       <y>385</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Alimento 2:</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="sb_a3_p2">
+     <property name="geometry">
+      <rect>
+       <x>1100</x>
+       <y>385</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_a3_p3">
+     <property name="geometry">
+      <rect>
+       <x>1025</x>
+       <y>456</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Alimento 3:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_a1_p3">
+     <property name="geometry">
+      <rect>
+       <x>710</x>
+       <y>456</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Alimento 1:</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="sb_a1_p3">
+     <property name="geometry">
+      <rect>
+       <x>783</x>
+       <y>453</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="sb_a2_p3">
+     <property name="geometry">
+      <rect>
+       <x>940</x>
+       <y>454</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_plate3">
+     <property name="geometry">
+      <rect>
+       <x>900</x>
+       <y>429</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Plato 3</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_a2_p3">
+     <property name="geometry">
+      <rect>
+       <x>866</x>
+       <y>455</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Alimento 2:</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="sb_a3_p3">
+     <property name="geometry">
+      <rect>
+       <x>1100</x>
+       <y>455</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_a3_p4">
+     <property name="geometry">
+      <rect>
+       <x>1025</x>
+       <y>520</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Alimento 3:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_a1_p4">
+     <property name="geometry">
+      <rect>
+       <x>710</x>
+       <y>520</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Alimento 1:</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="sb_a1_p4">
+     <property name="geometry">
+      <rect>
+       <x>783</x>
+       <y>517</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="sb_a2_p4">
+     <property name="geometry">
+      <rect>
+       <x>940</x>
+       <y>518</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_plate4">
+     <property name="geometry">
+      <rect>
+       <x>900</x>
+       <y>495</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Plato 4</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_a2_p4">
+     <property name="geometry">
+      <rect>
+       <x>866</x>
+       <y>519</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Alimento 2:</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="sb_a3_p4">
+     <property name="geometry">
+      <rect>
+       <x>1100</x>
+       <y>519</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_plates_results">
+     <property name="geometry">
+      <rect>
+       <x>680</x>
+       <y>600</y>
+       <width>491</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(0, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_calculate_plates">
+     <property name="geometry">
+      <rect>
+       <x>850</x>
+       <y>560</y>
+       <width>181</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Calcular Platos del Día</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_clean_search">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>610</y>
+       <width>141</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Limpiar Búsqueda</string>
      </property>
     </widget>
    </widget>

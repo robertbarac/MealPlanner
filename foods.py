@@ -39,6 +39,10 @@ class Food:
         cursor.execute(sql_sentence, [food_id])
         connection.commit()
         connection.close()
-    
-    def read_food(self):
-        pass
+
+    def search_food(self, food_name):
+        connection = self.get_connection()
+        cursor = connection.cursor()
+        sql_sentence = "SELECT * FROM food WHERE food_name = (?)"
+        cursor.execute(sql_sentence, [food_name])
+        return cursor.fetchall()
