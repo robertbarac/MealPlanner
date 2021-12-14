@@ -48,7 +48,7 @@ color: white;
      <rect>
       <x>30</x>
       <y>200</y>
-      <width>520</width>
+      <width>531</width>
       <height>381</height>
      </rect>
     </property>
@@ -260,9 +260,9 @@ color: white;
      <property name="geometry">
       <rect>
        <x>670</x>
-       <y>90</y>
+       <y>60</y>
        <width>20</width>
-       <height>601</height>
+       <height>631</height>
       </rect>
      </property>
      <property name="orientation">
@@ -308,8 +308,8 @@ color: white;
     <widget class="QLabel" name="label_age">
      <property name="geometry">
       <rect>
-       <x>734</x>
-       <y>70</y>
+       <x>730</x>
+       <y>60</y>
        <width>47</width>
        <height>13</height>
       </rect>
@@ -321,8 +321,8 @@ color: white;
     <widget class="QSpinBox" name="sb_age">
      <property name="geometry">
       <rect>
-       <x>774</x>
-       <y>65</y>
+       <x>770</x>
+       <y>55</y>
        <width>42</width>
        <height>22</height>
       </rect>
@@ -331,8 +331,8 @@ color: white;
     <widget class="QLabel" name="label_height">
      <property name="geometry">
       <rect>
-       <x>857</x>
-       <y>65</y>
+       <x>853</x>
+       <y>55</y>
        <width>71</width>
        <height>20</height>
       </rect>
@@ -344,18 +344,21 @@ color: white;
     <widget class="QSpinBox" name="sb_height">
      <property name="geometry">
       <rect>
-       <x>936</x>
-       <y>65</y>
+       <x>932</x>
+       <y>55</y>
        <width>42</width>
        <height>22</height>
       </rect>
+     </property>
+     <property name="maximum">
+      <number>250</number>
      </property>
     </widget>
     <widget class="QLabel" name="label_waist">
      <property name="geometry">
       <rect>
-       <x>1005</x>
-       <y>65</y>
+       <x>1001</x>
+       <y>55</y>
        <width>71</width>
        <height>20</height>
       </rect>
@@ -367,8 +370,8 @@ color: white;
     <widget class="QSpinBox" name="sb_waist">
      <property name="geometry">
       <rect>
-       <x>1087</x>
-       <y>65</y>
+       <x>1083</x>
+       <y>55</y>
        <width>42</width>
        <height>22</height>
       </rect>
@@ -380,8 +383,8 @@ color: white;
     <widget class="QLabel" name="label_activity_level">
      <property name="geometry">
       <rect>
-       <x>826</x>
-       <y>158</y>
+       <x>822</x>
+       <y>148</y>
        <width>111</width>
        <height>20</height>
       </rect>
@@ -393,8 +396,8 @@ color: white;
     <widget class="QLabel" name="label_weight">
      <property name="geometry">
       <rect>
-       <x>850</x>
-       <y>111</y>
+       <x>846</x>
+       <y>101</y>
        <width>60</width>
        <height>20</height>
       </rect>
@@ -406,8 +409,8 @@ color: white;
     <widget class="QDoubleSpinBox" name="dsb_weight">
      <property name="geometry">
       <rect>
-       <x>917</x>
-       <y>110</y>
+       <x>913</x>
+       <y>100</y>
        <width>62</width>
        <height>22</height>
       </rect>
@@ -425,8 +428,8 @@ color: white;
     <widget class="QSpinBox" name="sb_neck">
      <property name="geometry">
       <rect>
-       <x>775</x>
-       <y>110</y>
+       <x>771</x>
+       <y>100</y>
        <width>42</width>
        <height>22</height>
       </rect>
@@ -438,8 +441,8 @@ color: white;
     <widget class="QLabel" name="label_neck">
      <property name="geometry">
       <rect>
-       <x>700</x>
-       <y>110</y>
+       <x>696</x>
+       <y>100</y>
        <width>71</width>
        <height>20</height>
       </rect>
@@ -451,8 +454,8 @@ color: white;
     <widget class="QLabel" name="label_goal">
      <property name="geometry">
       <rect>
-       <x>1017</x>
-       <y>113</y>
+       <x>1000</x>
+       <y>103</y>
        <width>47</width>
        <height>16</height>
       </rect>
@@ -464,9 +467,9 @@ color: white;
     <widget class="QComboBox" name="cb_goal">
      <property name="geometry">
       <rect>
-       <x>1060</x>
-       <y>110</y>
-       <width>69</width>
+       <x>1043</x>
+       <y>100</y>
+       <width>91</width>
        <height>22</height>
       </rect>
      </property>
@@ -489,8 +492,8 @@ color: white;
     <widget class="QDoubleSpinBox" name="dsb_activity_level">
      <property name="geometry">
       <rect>
-       <x>937</x>
-       <y>157</y>
+       <x>933</x>
+       <y>147</y>
        <width>42</width>
        <height>22</height>
       </rect>
@@ -508,8 +511,8 @@ color: white;
     <widget class="QPushButton" name="btn_calculate_macros">
      <property name="geometry">
       <rect>
-       <x>870</x>
-       <y>200</y>
+       <x>866</x>
+       <y>190</y>
        <width>131</width>
        <height>23</height>
       </rect>
@@ -522,9 +525,9 @@ color: white;
      <property name="geometry">
       <rect>
        <x>680</x>
-       <y>240</y>
+       <y>230</y>
        <width>491</width>
-       <height>41</height>
+       <height>61</height>
       </rect>
      </property>
      <property name="styleSheet">

@@ -46,3 +46,10 @@ class Food:
         sql_sentence = "SELECT * FROM food WHERE food_name = (?)"
         cursor.execute(sql_sentence, [food_name])
         return cursor.fetchall()
+    
+    def search_food_by_id(self, id):
+        connection = self.get_connection()
+        cursor = connection.cursor()
+        sql_sentence = "SELECT food_name, prot_grams, carb_grams, fat_grams FROM food WHERE id = (?)"
+        cursor.execute(sql_sentence, [id])
+        return cursor.fetchall()
