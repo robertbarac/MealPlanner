@@ -238,7 +238,7 @@ color: white;
       <number>1</number>
      </property>
     </widget>
-    <widget class="QDoubleSpinBox" name="dsb_proteing_grams">
+    <widget class="QDoubleSpinBox" name="dsb_protein_grams">
      <property name="geometry">
       <rect>
        <x>142</x>
@@ -306,11 +306,11 @@ color: white;
    <zorder>label_food_name</zorder>
    <zorder>label_protein_grams</zorder>
    <zorder>label_carbos_grams</zorder>
-   <zorder>dsb_carbos_grams</zorder>
    <zorder>btn_add_food</zorder>
    <zorder>btn_modify_food</zorder>
    <zorder>btn_delete_food</zorder>
    <zorder>btn_cancel</zorder>
+   <zorder>dsb_carbos_grams</zorder>
   </widget>
  </widget>
  <resources/>
