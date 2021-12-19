@@ -1,5 +1,6 @@
 # MealPlanner
-Python project for calculate the optimal amount of food that you have to put on the plate to reach your fitness goals
+Python project for calculate the optimal amount of food that you have to put on the plate to reach your fitness goals.
+
 Why MealPlanner?
 This project was thought of people like me, or in the strictest sense, people like my sister. She attends the gym and practices bodybuilding, 
 in the Wellness category. In 2019 she won every competition she was in except for the first one. She became the South American champion that 
