@@ -10,7 +10,7 @@ measurements for her competition, so far we have not found a mobile application 
 from a certain amount of daily calories, the goal that the user chooses and the number of meals to be consumed in the day, giving the user the 
 number of grams to place of each food on the plate to be within your caloric needs.
 
-In this project I made use of my knowledge in python, object-oriented programming, SQL connection and commands, creation of modules and packages 
+In this project I made use of my knowledge in python, object-oriented programming, SQLite3 connection and commands, creation of modules and packages 
 in python for import into the project, CRUD database operations, etc.
 
 For prove the project, execute the main.py file.
