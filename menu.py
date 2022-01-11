@@ -62,6 +62,11 @@ class Menu:
         self.consult()
 
     def cancel(self):
+        self.menu.line_food_name.setText("")
+        self.menu.dsb_carbos_grams.setValue(0.0)
+        self.menu.dsb_fat_grams.setValue(0.0)
+        self.menu.dsb_protein_grams.setValue(0.0)
+        self.menu.line_id.setText("")
         self.consult()
 
 
